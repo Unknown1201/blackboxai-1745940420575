@@ -1,0 +1,525 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CoolDrinks Store - Refreshing Cold Drinks &amp; Bundles
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800">
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <a class="flex items-center space-x-2" href="#">
+      <img alt="CoolDrinks Store logo, stylized CD letters in blue and white" class="h-10 w-10" height="40" src="https://storage.googleapis.com/a1aa/image/da16f9f0-9c40-457b-f6ee-e846b8f0e869.jpg" width="40"/>
+      <span class="text-2xl font-bold text-blue-600">
+       CoolDrinks
+      </span>
+     </a>
+     <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
+      <a class="hover:text-blue-600 transition" href="#">
+       Home
+      </a>
+      <a class="hover:text-blue-600 transition" href="#products">
+       Products
+      </a>
+      <a class="hover:text-blue-600 transition" href="#about">
+       About
+      </a>
+      <a class="hover:text-blue-600 transition" href="#contact">
+       Contact
+      </a>
+     </nav>
+     <div class="flex items-center space-x-4">
+      <button aria-label="Search" class="text-gray-600 hover:text-blue-600 transition hidden md:block">
+       <i class="fas fa-search fa-lg">
+       </i>
+      </button>
+      <button aria-label="User Account" class="text-gray-600 hover:text-blue-600 transition hidden md:block">
+       <i class="fas fa-user fa-lg">
+       </i>
+      </button>
+      <button aria-label="Shopping Cart" class="relative text-gray-600 hover:text-blue-600 transition">
+       <i class="fas fa-shopping-cart fa-lg">
+       </i>
+       <span class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center font-bold">
+        0
+       </span>
+      </button>
+      <button aria-label="Open menu" class="md:hidden text-gray-600 hover:text-blue-600 transition focus:outline-none" id="mobile-menu-button">
+       <i class="fas fa-bars fa-lg">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Menu -->
+   <nav aria-label="Mobile menu" class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50 hover:text-blue-600" href="#">
+     Home
+    </a>
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50 hover:text-blue-600" href="#products">
+     Products
+    </a>
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50 hover:text-blue-600" href="#about">
+     About
+    </a>
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50 hover:text-blue-600" href="#contact">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section aria-label="Hero section with refreshing cold drinks and call to action" class="relative bg-white overflow-hidden">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative pt-16 pb-32 sm:pt-24 sm:pb-40 lg:pt-32 lg:pb-48 flex flex-col-reverse lg:flex-row items-center">
+     <div class="w-full lg:w-1/2 text-center lg:text-left">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+       Refresh Your Thirst
+       <br/>
+       With Our Cold Drinks &amp; Bundles
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 max-w-md mx-auto lg:mx-0">
+       Choose from Sprite, Coca-Cola, Thums Up, and a variety of water bottles
+            in multiple sizes. Perfect bundles for every occasion.
+      </p>
+      <a class="inline-block mt-8 px-8 py-3 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition" href="#products">
+       Shop Drinks
+      </a>
+     </div>
+     <div class="w-full lg:w-1/2 mb-12 lg:mb-0 flex justify-center">
+      <img alt="Assortment of cold drinks including Sprite, Coca-Cola, Thums Up bottles and water bottles in various sizes arranged on ice" class="rounded-lg shadow-lg max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/858930c2-e384-4480-a357-8df8bb221061.jpg" width="600"/>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Products Section -->
+  <section aria-label="Cold drinks and bundles for sale" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="products">
+   <h2 class="text-3xl font-extrabold text-gray-900 mb-12 text-center">
+    Our Cold Drinks &amp; Bundles
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" role="list">
+    <!-- Sprite 250ml Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Sprite 250ml green glass bottle with condensation on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ba1e4ad0-00f3-4a01-bd4f-7353d89af71c.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Sprite 250ml Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Refreshing lemon-lime soda in a convenient 250ml bottle.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $1.50
+       </span>
+       <button aria-label="Add Sprite 250ml Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Coca-Cola 250ml Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Coca-Cola 250ml glass bottle with condensation on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ba1b989f-7e0e-45c6-aa17-7cb5bb11b5eb.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Coca-Cola 250ml Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Classic Coca-Cola soda in a 250ml glass bottle.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $1.50
+       </span>
+       <button aria-label="Add Coca-Cola 250ml Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Thums Up 250ml Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Thums Up 250ml glass bottle with condensation on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eb3027da-f8f3-45d8-4b55-9210a157772d.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Thums Up 250ml Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Bold and fizzy Thums Up soda in a 250ml glass bottle.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $1.50
+       </span>
+       <button aria-label="Add Thums Up 250ml Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Water 250ml Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Clear 250ml plastic water bottle with label on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/be71129d-af67-4c94-3e71-23363f0317a0.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Water 250ml Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Pure and refreshing bottled water in a 250ml size.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $0.80
+       </span>
+       <button aria-label="Add Water 250ml Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Sprite 1L Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Sprite 1 liter plastic bottle with green label on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/80a783d9-57df-4f91-2869-0af3e772e679.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Sprite 1L Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Larger 1 liter bottle of refreshing lemon-lime Sprite soda.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $3.50
+       </span>
+       <button aria-label="Add Sprite 1L Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Coca-Cola 1L Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Coca-Cola 1 liter plastic bottle with red label on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/08666f7a-6e3f-4c66-ae57-35525da9801a.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Coca-Cola 1L Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Classic Coca-Cola soda in a convenient 1 liter bottle.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $3.50
+       </span>
+       <button aria-label="Add Coca-Cola 1L Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Thums Up 1L Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Thums Up 1 liter plastic bottle with brown label on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eb676f1a-eb44-45ab-a9dc-70e720d0d74a.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Thums Up 1L Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Bold Thums Up soda in a 1 liter plastic bottle.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $3.50
+       </span>
+       <button aria-label="Add Thums Up 1L Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Water 1L Bottle -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Clear 1 liter plastic water bottle with label on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7df91c4a-1504-4a57-dd03-d9d477edfe70.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Water 1L Bottle
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Pure and refreshing bottled water in a 1 liter size.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $1.80
+       </span>
+       <button aria-label="Add Water 1L Bottle to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Sprite Bundle (6 x 250ml) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 6 Sprite 250ml bottles arranged in a pack on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4940d127-1440-441f-7ad0-d6e36dadb5b4.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Sprite Bundle (6 x 250ml)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Pack of six refreshing 250ml Sprite bottles, perfect for parties.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $8.50
+       </span>
+       <button aria-label="Add Sprite Bundle 6x250ml to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Coca-Cola Bundle (6 x 250ml) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 6 Coca-Cola 250ml bottles arranged in a pack on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/438af7e2-3a0b-41af-65a4-ea0c8c2303f2.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Coca-Cola Bundle (6 x 250ml)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Pack of six classic Coca-Cola 250ml bottles for sharing.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $8.50
+       </span>
+       <button aria-label="Add Coca-Cola Bundle 6x250ml to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Thums Up Bundle (6 x 250ml) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 6 Thums Up 250ml bottles arranged in a pack on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/362059ff-ebcd-48d8-7fe6-ffce4b078de3.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Thums Up Bundle (6 x 250ml)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Pack of six bold Thums Up 250ml bottles, great for gatherings.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $8.50
+       </span>
+       <button aria-label="Add Thums Up Bundle 6x250ml to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Water Bundle (6 x 250ml) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 6 clear 250ml water bottles arranged in a pack on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/49ec0d97-e434-4b60-c0e9-23aa2b5995dc.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Water Bundle (6 x 250ml)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Pack of six pure 250ml water bottles, ideal for hydration on the go.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $4.50
+       </span>
+       <button aria-label="Add Water Bundle 6x250ml to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Sprite Bundle (2 x 1L) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 2 Sprite 1 liter bottles on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2ffce020-0dd7-49c5-5593-3b37aba918f2.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Sprite Bundle (2 x 1L)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Two 1 liter bottles of refreshing Sprite soda, perfect for sharing.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $6.50
+       </span>
+       <button aria-label="Add Sprite Bundle 2x1L to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Coca-Cola Bundle (2 x 1L) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 2 Coca-Cola 1 liter bottles on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9914ed4b-f6eb-4826-ff23-293d28cda39a.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Coca-Cola Bundle (2 x 1L)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Two 1 liter bottles of classic Coca-Cola soda for your convenience.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $6.50
+       </span>
+       <button aria-label="Add Coca-Cola Bundle 2x1L to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Thums Up Bundle (2 x 1L) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 2 Thums Up 1 liter bottles on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dce52809-efb1-4030-a636-9cd5a582f386.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Thums Up Bundle (2 x 1L)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Two 1 liter bottles of bold Thums Up soda, great for sharing.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $6.50
+       </span>
+       <button aria-label="Add Thums Up Bundle 2x1L to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+    <!-- Water Bundle (2 x 1L) -->
+    <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col" role="listitem">
+     <img alt="Bundle of 2 clear 1 liter water bottles on a white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0c1c1e44-af14-4c37-5511-63ebb08549a0.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold text-gray-900">
+       Water Bundle (2 x 1L)
+      </h3>
+      <p class="mt-2 text-gray-600 flex-grow">
+       Two 1 liter bottles of pure water, perfect for hydration.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-xl font-bold text-blue-600">
+        $3.20
+       </span>
+       <button aria-label="Add Water Bundle 2x1L to cart" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- About Section -->
+  <section aria-label="About CoolDrinks company information" class="bg-white py-16 border-t border-gray-200" id="about">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:space-x-16">
+    <div class="lg:w-1/2 mb-10 lg:mb-0">
+     <img alt="CoolDrinks team packing cold drinks in a warehouse with boxes and bottles" class="rounded-lg shadow-lg w-full h-auto object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9b08c124-84f9-4bb2-7403-a229273bd0e8.jpg" width="600"/>
+    </div>
+    <div class="lg:w-1/2">
+     <h2 class="text-3xl font-extrabold text-gray-900 mb-6">
+      About CoolDrinks
+     </h2>
+     <p class="text-gray-700 mb-4 leading-relaxed">
+      CoolDrinks is your go-to online store for refreshing cold drinks and
+          convenient bundles. We offer popular brands like Sprite, Coca-Cola,
+          Thums Up, and pure bottled water in various sizes to quench your thirst.
+     </p>
+     <p class="text-gray-700 leading-relaxed">
+      Whether you need a single bottle or a bundle for your next event, we
+          provide quality products with fast delivery and excellent customer
+          service.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section aria-label="Contact form for customer inquiries" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-100 rounded-lg my-16" id="contact">
+   <h2 class="text-3xl font-extrabold text-gray-900 mb-12 text-center">
+    Get in Touch
+   </h2>
+   <form action="#" class="max-w-3xl mx-auto grid grid-cols-1 gap-y-6" method="POST" novalidate="">
+    <div>
+     <label class="block text-sm font-medium text-gray-700" for="name">
+      Full Name
+     </label>
+     <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+    </div>
+    <div>
+     <label class="block text-sm font-medium text-gray-700" for="email">
+      Email Address
+     </label>
+     <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+    </div>
+    <div>
+     <label class="block text-sm font-medium text-gray-700" for="message">
+      Message
+     </label>
+     <textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50" id="message" name="message" placeholder="Write your message here..." required="" rows="4"></textarea>
+    </div>
+    <div class="text-center">
+     <button class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition" type="submit">
+      <i class="fas fa-paper-plane mr-2">
+      </i>
+      Send Message
+     </button>
+    </div>
+   </form>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-gray-600 text-sm">
+     © 2024 CoolDrinks. All rights reserved.
+    </p>
+    <div class="flex space-x-6 mt-4 md:mt-0">
+     <a aria-label="Facebook" class="text-gray-600 hover:text-blue-600 transition" href="#">
+      <i class="fab fa-facebook fa-lg">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="text-gray-600 hover:text-blue-600 transition" href="#">
+      <i class="fab fa-twitter fa-lg">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="text-gray-600 hover:text-blue-600 transition" href="#">
+      <i class="fab fa-instagram fa-lg">
+      </i>
+     </a>
+     <a aria-label="LinkedIn" class="text-gray-600 hover:text-blue-600 transition" href="#">
+      <i class="fab fa-linkedin fa-lg">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
